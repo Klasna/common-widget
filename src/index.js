@@ -1,10 +1,15 @@
 //@flow
 
-export class CommonWidget {
+class CommonWidget {
   constructor (rootElement, htmlTemplate) {
     this.rootElement = this.getRootElement(rootElement)
+    this.htmlTemplate = htmlTemplate
+    this.setHtmlTemplate()
+  }
+
+  setHtmlTemplate() {
     if(this.rootElement) {
-      this.rootElement.innerHTML = htmlTemplate
+      this.rootElement.innerHTML = this.htmlTemplate
     }
   }
 
