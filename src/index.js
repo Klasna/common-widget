@@ -1,6 +1,6 @@
 //@flow
 
-class CommonWidget {
+export default class CommonWidget {
   constructor (rootElement, htmlTemplate) {
     this.rootElement = this.getRootElement(rootElement)
     this.htmlTemplate = htmlTemplate
@@ -16,8 +16,4 @@ class CommonWidget {
   getRootElement(rootElementId) {
     return document.querySelector(`#${rootElementId}`)
   }
-}
-
-if ('undefined' !== typeof module) {
-	module.exports = new CommonWidget();
 }
