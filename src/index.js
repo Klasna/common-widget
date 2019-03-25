@@ -1,4 +1,6 @@
 //@flow
+import 'babel-polyfill'
+
 
 export default class CommonWidget {
   constructor (rootElement, htmlTemplate) {
@@ -10,6 +12,8 @@ export default class CommonWidget {
   setHtmlTemplate() {
     if(this.rootElement) {
       this.rootElement.innerHTML = this.htmlTemplate
+    } else {
+      console.log(`Common Widget: Unable to find root #${this.rootElementId} element.`)
     }
   }
 
